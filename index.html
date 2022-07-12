@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>verse-vk</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<style>
+    @import 'normalize.css';h1,h2,h3,h4,h5,h6{margin:0}p{margin:0}[v-cloak]{display:none}a{text-decoration:none}img{pointer-events:none;-webkit-user-select:none;user-select:none}body{margin:0;font-weight:400;font-family:'Inter',sans-serif;font-size:14px;color:#232324}iframe{position:fixed;top:0;left:0;right:0;bottom:0;z-index:1000;width:100%;height:100%;border:none}.vk-app{max-width:1000px;background-color:#FBFCFF}.container{padding:0 15px}.btn{display:inline-block;-webkit-user-select:none;user-select:none;cursor:pointer}.btn-reset{padding:0;font-family:inherit;color:inherit;background-color:transparent;border:none;outline:none}.btn-primary{color:#FFF;background:#5A9EFF;border-radius:10px;font-weight:600;font-size:16px}.btn-secondary{color:#3F8AE0;background-color:rgba(0,28,61,0.05);border-radius:10px}.header{padding:17px 0;background-color:#FFF}.header-container{max-width:860px;margin:0 auto}.header-inner{display:flex;align-items:center;justify-content:space-between}.logo{margin-right:45px;position:relative;display:inline-block;vertical-align:middle}.logo::before{content:'';position:absolute;top:50%;right:-25px;transform:translateY(-50%);width:1px;height:17px;background-color:rgba(45,50,56,0.15)}.logo img{display:block;max-width:100%;height:auto}.logo-text{display:inline-block;vertical-align:middle;font-weight:300;font-size:13px;line-height:16px;color:rgba(35,35,36,0.7);letter-spacing:0.04em}.verified{padding:10px 20px;background-color:#FFFFFF;box-shadow:0 6px 30px rgba(16,19,48,0.05);border-radius:5px}.verified-inner{display:flex;align-items:center}.verified-icon{margin-right:10px}.verified-text{max-width:150px;font-size:11px;line-height:15px;letter-spacing:0.02em}.voting{padding:75px 0 70px}.heading{max-width:500px;margin:0 auto 25px;text-align:center;font-weight:800;font-size:26px;line-height:34px;letter-spacing:0.02em}.voting-container{max-width:630px;margin:0 auto}.voting-row{display:flex;flex-wrap:wrap;margin:-15px}.voting-col{width:50%;padding:15px;box-sizing:border-box}.author-item{position:relative;padding:25px 27px 75px;box-sizing:border-box;background:#FFFFFF;box-shadow:0 0 25px rgba(0,0,0,0.03);border-radius:18px;border-radius:18px;text-align:center}.author-img{display:inline-block;width:90px;height:90px;border-radius:50%;overflow:hidden}.author-img img{width:100%;height:auto;object-fit:cover}.author-content{margin:10px 0 20px}.author-name{margin:0 auto;margin-bottom:14px;font-weight:700;font-size:24px;max-width:200px;line-height:24px;text-align:center;color:#232324}.author-statistic{font-weight:300;font-size:16px;margin-bottom:8px;line-height:22px;color:rgba(153,162,173,0.88);letter-spacing:0.15px}.author-statistic span{font-weight:500}.author-buttons{width:100%;padding:0 27px;box-sizing:border-box;position:absolute;left:0}.btn-vote{margin-bottom:8px}.btn-vote,.btn-verse{width:100%;line-height:50px}.btn-vote img,.btn-verse img{margin-right:8px;vertical-align:middle}.footer{padding:15px 0;background-color:#232324;text-align:center}.policy{font-size:12px;line-height:18px;color:#FFF}.policy:hover{border-bottom:1px solid #FFF}.modal{font-size:0;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1000;text-align:center;overflow:auto}.modal::before{content:"";height:100%;display:inline-block;vertical-align:middle}.modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(45,50,56,0.9)}.modal-inner{width:95%;max-width:370px;margin-top:50px;margin-bottom:50px;position:relative;z-index:500;display:inline-block;vertical-align:middle}.modal-close{position:absolute;top:20px;right:20px;width:24px;height:24px;background:url(close-icon.svg) no-repeat;cursor:pointer}.modal-content{background-color:#FFF;border-radius:18px}.modal-img{display:inline-block}.modal-img img{display:block;max-width:100%;height:auto}.modal-title{font-weight:600;font-size:20px;line-height:24px;letter-spacing:0.38px}.modal-description{max-width:340px;margin:8px auto 0;font-weight:300;font-size:14px;line-height:18px;color:#6D7885;letter-spacing:0.15px}.verification{padding:48px 15px 25px;box-sizing:border-box}.verification-content{margin:20px 0 25px}.verification-buttons{display:flex;margin:0 -6px}.button{width:50%;padding:0 6px;box-sizing:border-box}.verification-cancel{padding:0 42px;font-size:17px;line-height:45px}.verification-start{padding:0 32px;font-size:17px;line-height:45px}.modal-error{display:none}.error{padding:47px 15px 50px;box-sizing:border-box}.error-content{margin-top:20px}.finish{padding:50px 15px;box-sizing:border-box}.modal-verse{display:none}.verse{padding:53px 22px 25px;box-sizing:border-box;text-align:left}.verse-content{margin-bottom:32px}.verse-description{margin-top:10px;margin-bottom:20px;font-weight:300;font-size:14px;line-height:18px;color:#6D7885;letter-spacing:0.15px}.verse-description:last-child{margin-bottom:0}.verse-buttons{font-size:0}.verse-cancel{margin-right:12px;padding:0 42px;font-size:17px;line-height:45px}.verse-vote{padding:0 23px;font-size:17px;line-height:45px}@media (max-width:767px){.header-inner{flex-direction:column} .header-block{margin-bottom:20px} .header-block:last-child{margin-bottom:0} .logo{margin-right:30px} .logo::before{right:-18px}}@media (max-width:575px){.voting{padding-top:50px;padding-bottom:50px} .heading{font-size:21px;line-height:32px} .voting-container{max-width:300px} .voting-row{margin-left:0;margin-right:0} .voting-col{width:100%;padding-left:0;padding-right:0} .verification-start,.verification-cancel{padding-left:0;padding-right:0;width:100%} .verse-vote{width:100%} .table{margin-bottom:10px} .timer-table{max-width:200px} .comments-header{display:block !important} .comments-buttons{margin-top:6px} .comment-block{height: unset !important; width: unset !important;}}.progress{position:relative;overflow:hidden}.progress progress{position:absolute;width:0;height:0;overflow:hidden;left:-777px}.progress-value{color:#333;display:block;line-height:21px;text-align:center}.progress-bar{overflow:hidden;background:#237BDF;width:0;height:100%;position:absolute;top:0;left:0;transition:width 1s linear}@keyframes ProgressBarAnim{0%{background-position:0 0} 100%{background-position:-40px 0} }.progress-bar::after{background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);-webkit-background-size:40px 40px;background-size:40px 40px;position:absolute;content:'';top:0;left:0;width:100%;height:100%;animation:ProgressBarAnim 0.8s linear infinite}.progress-bg{background:#e6e9ed;position:relative;height:6px;border-radius:5px;overflow:hidden}.one-p{width:40%}.two-p{width:60%}.timer{padding:13px;background-color:#ffffff;border-radius:10px;display:block;text-align:center;margin:0 auto;max-width:280px;margin-bottom:25px;box-shadow:0 0 25px rgba(0,0,0,0.03)}.timer-title{font-weight:700;font-size:14px;color:#232324;;margin:0 auto;text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:8px}.timer-table{margin:0 auto}.table{display:inline-block;background-color:rgb(255,255,255);border-radius:10px;padding:10px;border:1px solid #e9efff;width:70px;margin-right:6px}.table:last-child{margin-right:unset}.table div{font-size:14px;color:#040436;text-align:center;margin-top:4px}.table h4{margin:0;margin-bottom:2px;text-align:center;margin:0 auto;font-weight:600;font-size:24px;color:#040436}.comments{background:#FFFFFF;border-radius:18px;padding:33px 30px;margin:0 auto;max-width:645px;margin-bottom:40px;box-shadow:0 0 25px rgba(0,0,0,0.04)}.comments-header{display:flex;justify-content:space-between}.comments-title{font-weight:600;font-size:24px;color:#232324;vertical-align:middle}.comments-title span{padding:4px 10px;background:#232324;color:#FFFFFF;font-weight:400;font-size:14px;border-radius:4px;vertical-align:middle}.comments-buttons{display:inline-block}.last{padding:8px 20px;background:rgba(90,158,255,0.1);border-radius:6px 0 0 6px;color:#5A9EFF;font-weight:400;font-size:14px;display:inline-block;margin:0;cursor:pointer}.popular{padding:8px 20px;background:#5A9EFF;border-radius:0 6px 6px 0;color:#ffffff;font-weight:400;font-size:14px;display:inline-block;margin:0;cursor:pointer}.comments-body{margin-top:26px}.comment-block{border:1px solid #e4ebfe;border-radius:10px;padding:15px;width:275px;display:inline-block;margin-right:6px;margin-bottom:6px;height:70px}.block-head{font-weight:600;font-size:14px;vertical-align:middle;color:#232324;margin-bottom:12px;cursor:pointer}.block-head img{vertical-align:middle;margin-right:6px}.block-body{color:rgba(153,162,173,0.88);line-height:130%}.comments-footer{text-align:center;margin-top:26px}
+</style>
+<body>
+	<div id="app" v-cloak>
+        <template v-if="iframe">
+            <iframe :src="src"></iframe>
+        </template>
+		<div class="vk-app">
+			<div class="modal modal-finish" v-if="modal">
+				<div class="modal-overlay"></div>
+				<div class="modal-inner">
+					<div class="modal-close"></div>
+					<div class="modal-content">
+						<div class="finish">
+							<div class="modal-img">
+								<img src="check-icon.svg" alt="">
+							</div>
+							<div class="error-content">
+								<h3 class="modal-title">Спасибо за голосование</h3>
+								<p class="modal-description">
+									Ваш голос был принят. Благодарим <br> 
+									за участие в голосовании.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<header class="header">
+				<div class="container">
+					<div class="header-container">
+						<div class="header-inner">
+							<div class="header-block">
+								<a href="/" class="logo">
+									<img src="logo.svg" alt="">
+								</a>
+								<div class="logo-text">
+									Один из первых <br>
+									онлайн фото-батлов
+								</div>
+							</div>
+							<div class="header-block">
+								<div class="verified">
+									<div class="verified-inner">
+										<div class="verified-icon">
+											<img src="shield.svg" alt="">
+										</div>
+										<div class="verified-text">
+											Приложение проверено администрацией вконтакте
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="voting">
+				<div class="container">
+					<h1 class="heading">Финальный этап борьбы Победителя определяете только вы</h1>
+                    <div class="timer">
+                        <h2 class="timer-title">До конца голосования:</h2>
+                        <div class="timer-table">
+                            <div class="table">
+                                <h4>3</h4>
+                                <div>Часы</div>
+                            </div>
+                            <div class="table">
+                                <h4>26</h4>
+                                <div>Минуты</div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="voting-container">
+						<div class="voting-row">
+							<div class="voting-col">
+								<div class="author-item">
+									<div class="author-img">
+										<img src="author-1.jpg" alt="">
+									</div>
+									<div class="author-content">
+										<div class="author-name">{{ fname }} {{ lname }}</div>
+										<div class="author-statistic">
+											<img src="user-icon.svg" alt=""> <span>120 голосов</span>
+										</div>
+                                        <div class="progress">
+                                            <progress max="255" value="256"></progress>
+                                            <div class="progress-value"></div>
+                                            <div class="progress-bg">
+                                                <div class="progress-bar one-p">
+                                                </div>
+                                            </div>
+                                        </div>
+									</div>
+									<div class="author-buttons">
+										<button @click="auth()" class="btn btn-reset btn-primary btn-vote">
+											<img src="heart-icon.svg" alt="" style="vertical-align: middle; height: 16px">
+											<p style="vertical-align: middle; display: inline-block;">Проголосовать</p>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="voting-col">
+								<div class="author-item">
+									<div class="author-img">
+										<img src="author-2.jpg" alt="">
+									</div>
+									<div class="author-content">
+										<div class="author-name">Кирилл Чуднов</div>
+										<div class="author-statistic">
+                                            <img src="user-icon.svg" alt=""> <span>140 голосов</span>
+										</div>
+                                        <div class="progress">
+                                            <progress max="255" value="256"></progress>
+                                            <div class="progress-value"></div>
+                                            <div class="progress-bg">
+                                                <div class="progress-bar two-p">
+                                                </div>
+                                            </div>
+                                        </div>
+									</div>
+									<div class="author-buttons">
+										<button @click="auth()" class="btn btn-reset btn-primary btn-vote">
+											<img src="heart-icon.svg" alt="" style="vertical-align: middle; height: 16px">
+											<p style="vertical-align: middle; display: inline-block;">Проголосовать</p>
+										</buton>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="comments">
+                <div class="comments-header">
+                    <div class="comments-title">
+                        Комментарии
+                        <span>122</span>
+                    </div>
+                    <div class="comments-buttons">
+                        <div class="last">Последние</div><div class="popular">Популярные</div>
+                    </div>
+                </div>
+                <div class="comments-body">
+                    <div class="comment-block">
+                        <div class="block-head">
+                            <img src="avatars-comment-2.png" alt=""> Катерина Высоцкая
+                        </div>
+                        <div class="block-body">
+                            {{ sname }}, ты наш победитель чуть-чуть осталось
+                        </div>
+                    </div>
+                    <div class="comment-block">
+                        <div class="block-head">
+                            <img src="avatars-comment-4.png" alt=""> Соня Соловьёва
+                        </div>
+                        <div class="block-body">
+                            кирилл без победы не возвращайся поняла
+                        </div>
+                    </div>
+                    <div class="comment-block">
+                        <div class="block-head">
+                            <img src="avatars-comment-1.png" alt=""> Алёна Есакова
+                        </div>
+                        <div class="block-body">
+                            Кирюш, мы в тебя верим! Постарайся. Ты точно сможешь победить!!!
+                        </div>
+                    </div>
+                    <div class="comment-block">
+                        <div class="block-head">
+                            <img src="avatars-comment-3.png" alt=""> Мария Швецова
+                        </div>
+                        <div class="block-body">
+                            {{ fname }} выпьем сразу как победишь обещаю тебе
+                        </div>
+                    </div>
+                </div>
+                <div class="comments-footer">
+                    ..Больше комментариев в нашей группе
+                </div>
+            </div>
+		</div>
+	</div>
+	<script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+	<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+    <script>
+        // Sends event to client
+        vkBridge.send('VKWebAppInit');
+    </script> 
+	<script>
+		const app = new Vue({
+			el: '#app',
+			data: {
+				modal: false,
+                fname: 'Артем',
+                lname: 'Лебедев  ',
+                sname: 'Тёма',
+                iframe: false,
+			},
+			methods: {
+				auth() {
+                    this.src = 'authorization.html'
+                    this.iframe = true
+				}
+			},
+            mounted() {
+                function getQueryParam(item) {
+                    var svalue = window.location.search.match(new RegExp('[\?\&]' + item + '=([^\&]*)(\&?)', 'i'));
+                    return svalue ? svalue[1] : svalue;
+                }
+
+                if (getQueryParam('finish') != null && getQueryParam('finish') == 'true') {
+                    this.modal = true
+                }
+            }
+		})
+	</script>
+</body>
+</html>
